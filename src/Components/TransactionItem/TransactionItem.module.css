@@ -1,0 +1,18 @@
+.transactionItem {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(173, 169, 169);
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.tnxItemExpense {
+  border-right: 10px solid #b91c1c;
+}
+
+.tnxItemIncome {
+  border-right: 10px solid #65a30d;
+}

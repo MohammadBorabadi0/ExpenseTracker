@@ -44,6 +44,18 @@ html {
   border: none;
 }
 
+span {
+  font-weight: 700;
+}
+
+span.expense {
+  color: #b91c1c;
+}
+
+span.income {
+  color: #15803d;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;
