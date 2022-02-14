@@ -14,6 +14,12 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "ADD": {
       const count = state.counter + 1;
+
+      const newAmount =
+        action.typeTnx === "income"
+          ? Number(action.amount)
+          : Number(`-${action.amount}`);
+
       return {
         ...state,
         counter: count,
@@ -22,7 +28,7 @@ const reducer = (state, action) => {
           {
             id: state.counter,
             text: action.text,
-            amount: action.amount,
+            amount: newAmount,
             type: action.typeTnx,
           },
         ],
