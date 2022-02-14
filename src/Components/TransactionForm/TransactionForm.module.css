@@ -75,3 +75,12 @@ label {
   font-size: 1.4rem;
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .balance {
+    width: 95%;
+  }
+  form {
+    width: 95%;
+  }
+}

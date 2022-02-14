@@ -16,3 +16,9 @@
 .tnxItemIncome {
   border-right: 10px solid #65a30d;
 }
+
+@media (max-width: 768px) {
+  .transactionItem {
+    width: 95%;
+  }
+}

@@ -44,3 +44,12 @@
   align-items: center;
   width: 80%;
 }
+
+@media (max-width: 768px) {
+  .transactions {
+    width: 95%;
+  }
+  .filter {
+    width: 95%;
+  }
+}
