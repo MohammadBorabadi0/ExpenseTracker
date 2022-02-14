@@ -1,0 +1,12 @@
+span {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+span.expense {
+  color: #b91c1c;
+}
+
+span.income {
+  color: #15803d;
+}

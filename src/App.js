@@ -1,7 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
+
+// Components
+import TransactionApp from "./Components/TransactionApp/TransactionApp";
 
 const App = () => {
-  return <div>app</div>;
+  return (
+    <Fragment>
+      <div className="container">
+        <TransactionApp />
+      </div>
+    </Fragment>
+  );
 };
 
 export default App;

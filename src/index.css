@@ -12,6 +12,38 @@ html {
   font-size: 62.5%;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Buttons  */
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border: 2px solid #581c87;
+  color: #581c87;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(10deg, #933de4, #581c87);
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #b91c1c;
+  border: none;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;

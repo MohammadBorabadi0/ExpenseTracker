@@ -1,0 +1,7 @@
+.transactionApp {
+  width: 40%;
+  background-color: #ddd;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.9);
+}
