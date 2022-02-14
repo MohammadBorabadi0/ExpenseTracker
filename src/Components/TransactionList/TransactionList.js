@@ -1,9 +1,16 @@
 import React from "react";
+
+// Context
+import { useTransactions } from "../../Provider/TransactionProvider";
+
+// Components
 import TransactionItem from "../TransactionItem/TransactionItem";
 
+// Css
 import styles from "./TransactionList.module.css";
 
 const TransactionList = () => {
+  const { transactions } = useTransactions();
   return (
     <div className={styles.transactionList}>
       <div className={styles.transactions}>
@@ -16,7 +23,9 @@ const TransactionList = () => {
           <span className="income">$2500</span>
         </div>
       </div>
-      <TransactionItem />
+      {transactions.map((item) => (
+        <TransactionItem key={item.id} item={item} />
+      ))}
     </div>
   );
 };

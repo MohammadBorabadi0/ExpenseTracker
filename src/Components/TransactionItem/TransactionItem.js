@@ -3,16 +3,16 @@ import React, { Fragment } from "react";
 // Css
 import styles from "./TransactionItem.module.css";
 
-const TransactionItem = () => {
+const TransactionItem = ({ item }) => {
   return (
     <Fragment>
-      <div className={`${styles.transactionItem} ${styles.tnxItemExpense}`}>
-        <h4>Item -1</h4>
-        <span>$ 1000</span>
-      </div>
-      <div className={`${styles.transactionItem} ${styles.tnxItemIncome}`}>
-        <h4>Item -2</h4>
-        <span>$ 400</span>
+      <div
+        className={`${styles.transactionItem} ${
+          item.type === "expense" ? styles.tnxItemExpense : styles.tnxItemIncome
+        }`}
+      >
+        <h4>{item.text}</h4>
+        <span>$ {item.amount}</span>
       </div>
     </Fragment>
   );

@@ -2,13 +2,16 @@ import React, { Fragment } from "react";
 
 // Components
 import TransactionApp from "./Components/TransactionApp/TransactionApp";
+import TransactionProvider from "./Provider/TransactionProvider";
 
 const App = () => {
   return (
     <Fragment>
-      <div className="container">
-        <TransactionApp />
-      </div>
+      <TransactionProvider>
+        <div className="container">
+          <TransactionApp />
+        </div>
+      </TransactionProvider>
     </Fragment>
   );
 };
