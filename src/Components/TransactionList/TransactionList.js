@@ -19,7 +19,7 @@ const TransactionList = () => {
 
   const changeHandler = (e) => {
     const searchResults = transactions.filter((i) =>
-      i.text.toLowerCase().includes(e.target.value)
+      i.text.toLowerCase().includes(e.target.value.toLowerCase())
     );
     setFilteredTnx(searchResults);
   };
