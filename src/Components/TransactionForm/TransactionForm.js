@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 
 // Context
 import { useTransactionsActions } from "../../Provider/TransactionProvider";
@@ -19,6 +19,11 @@ const TransactionForm = () => {
   const [formValues, setFormValues] = useState(initialValue);
   const [isShow, setIsShow] = useState(false);
   const dispatch = useTransactionsActions();
+  const inputRef = createRef();
+
+  useEffect(() => {
+    if (isShow ? inputRef.current.focus() : null);
+  }, [isShow]);
 
   const changeHandler = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -30,6 +35,13 @@ const TransactionForm = () => {
 
   const addTransaction = (e) => {
     e.preventDefault();
+    if (!formValues.text) {
+      alert("Text should not be empty");
+      return;
+    } else if (formValues.amount === 0) {
+      alert("Amount should not be 0 !!");
+      return;
+    }
     dispatch({
       type: "ADD",
       text: formValues.text,
@@ -54,6 +66,7 @@ const TransactionForm = () => {
       {isShow ? (
         <form onSubmit={addTransaction}>
           <input
+            ref={inputRef}
             name="text"
             className={styles.formControl}
             type="text"
